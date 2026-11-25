@@ -5,3 +5,4 @@ logs/
 *.class
 .work/
 /docs
+/artwork
