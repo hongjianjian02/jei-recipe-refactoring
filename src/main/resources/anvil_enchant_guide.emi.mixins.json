@@ -1,0 +1,13 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "cn.blockforge.generated.anvilenchantguide.mixin",
+  "plugin": "cn.blockforge.generated.anvilenchantguide.mixin.EmiOptionalMixinPlugin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "EmiRecipeManagerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
