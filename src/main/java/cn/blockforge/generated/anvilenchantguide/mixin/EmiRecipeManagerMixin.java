@@ -1,15 +1,16 @@
 package cn.blockforge.generated.anvilenchantguide.mixin;
 
-import cn.blockforge.generated.anvilenchantguide.emi.FocusedEmiRecipes;
+import java.util.List;
+
 import cn.blockforge.generated.anvilenchantguide.emi.EmiFocusedQueryManager;
+import cn.blockforge.generated.anvilenchantguide.emi.FocusedEmiRecipes;
 import dev.emi.emi.api.EmiApi;
 import dev.emi.emi.api.recipe.EmiRecipe;
 import dev.emi.emi.api.stack.EmiStack;
-import java.util.List;
-import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.Mixin;
 
 /** Adds one focused guide page while preserving the manager's other recipe results. */
 @Mixin(targets = "dev.emi.emi.registry.EmiRecipes$Manager", remap = false)

@@ -3,14 +3,15 @@ package cn.blockforge.generated.anvilenchantguide.jei;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.mojang.blaze3d.platform.InputConstants;
-
 import cn.blockforge.generated.anvilenchantguide.data.AnvilAddon;
 import cn.blockforge.generated.anvilenchantguide.data.AnvilEnchantData;
 import cn.blockforge.generated.anvilenchantguide.data.BookEntry;
+import cn.blockforge.generated.anvilenchantguide.recipe.AnvilItemEnchantRecipe;
+import cn.blockforge.generated.anvilenchantguide.recipe.AnvilRecipeFactory;
 import cn.blockforge.generated.anvilenchantguide.ui.AnvilGuideLayoutText;
 import cn.blockforge.generated.anvilenchantguide.ui.AnvilGuideText;
 import cn.blockforge.generated.anvilenchantguide.util.TextUtils;
+import com.mojang.blaze3d.platform.InputConstants;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.builder.IRecipeSlotBuilder;
 import mezz.jei.api.gui.builder.ITooltipBuilder;
@@ -20,17 +21,17 @@ import mezz.jei.api.gui.inputs.IJeiInputHandler;
 import mezz.jei.api.gui.inputs.IJeiUserInput;
 import mezz.jei.api.gui.widgets.IRecipeExtrasBuilder;
 import mezz.jei.api.helpers.IGuiHelper;
+import mezz.jei.api.recipe.category.AbstractRecipeCategory;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
-import mezz.jei.api.recipe.category.AbstractRecipeCategory;
 import mezz.jei.api.runtime.IJeiRuntime;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.navigation.ScreenRectangle;
+import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ItemStack;
 
 /**
  * 物品页铁砧附魔视图：输入一件物品，用一整块滚动网格列出它能吃的全部附魔书。
@@ -91,14 +92,14 @@ public class AnvilItemEnchantCategory extends AbstractRecipeCategory<AnvilItemEn
      * 段落之间先补齐当前行，再空一整行画分隔带，保证每一段都从新的一行开始。
      */
     private List<AnvilCell> buildCells(AnvilItemEnchantRecipe recipe) {
-        List<AnvilCell> cells = new ArrayList<>(Math.max(recipe.gridCells(), 0));
+        List<AnvilCell> cells = new ArrayList<>(Math.max(recipe.gridCells(Layout.COLUMNS), 0));
         int curseStart = recipe.firstCurseIndex();
         int positives = recipe.separatesCurses() ? curseStart : recipe.books().size();
         for (int index = 0; index < positives; index++) {
             cells.add(AnvilCell.of(recipe.books().get(index)));
         }
         if (recipe.separatesCurses()) {
-            int padding = AnvilItemEnchantRecipe.sectionPadding(curseStart);
+            int padding = AnvilItemEnchantRecipe.sectionPadding(curseStart, Layout.COLUMNS);
             for (int index = 0; index < padding; index++) {
                 cells.add(index == padding - 1
                         ? AnvilCell.header(Component.translatable("anvil_enchant_guide.section.curses",
@@ -195,7 +196,7 @@ public class AnvilItemEnchantCategory extends AbstractRecipeCategory<AnvilItemEn
                     Layout.TEXT_X, Layout.REPAIR_TEXT_Y, Layout.COLOR_TEXT_DIM, false);
             return;
         }
-        Component label = AnvilGuideLayoutText.repairLabel();
+        Component label = AnvilGuideText.repairLabel();
         guiGraphics.drawString(font, label, Layout.REPAIR_TEXT_X, Layout.REPAIR_TEXT_Y, Layout.COLOR_TEXT, false);
 
         int namesX = Layout.REPAIR_TEXT_X + font.width(label) + 4;

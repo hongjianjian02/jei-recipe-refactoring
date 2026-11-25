@@ -1,9 +1,9 @@
 package cn.blockforge.generated.anvilenchantguide.jei;
 
 import mezz.jei.api.gui.drawable.IDrawable;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
 
 /**

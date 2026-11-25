@@ -1,8 +1,9 @@
 package cn.blockforge.generated.anvilenchantguide.jei;
 
+import java.util.List;
+
 import cn.blockforge.generated.anvilenchantguide.data.AnvilEnchantData;
 import cn.blockforge.generated.anvilenchantguide.recipe.AnvilRecipeFactory;
-import java.util.List;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.recipe.advanced.IRecipeManagerPlugin;
 import mezz.jei.api.recipe.category.IRecipeCategory;

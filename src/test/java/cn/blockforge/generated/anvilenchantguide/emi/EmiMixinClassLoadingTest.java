@@ -1,12 +1,12 @@
 package cn.blockforge.generated.anvilenchantguide.emi;
 
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import org.junit.jupiter.api.Test;
 
 /** Runs through forgejunitdev's real Mixin transformer, rather than a plain JVM loader. */
 class EmiMixinClassLoadingTest {

@@ -1,5 +1,10 @@
 package cn.blockforge.generated.anvilenchantguide.emi;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 import cn.blockforge.generated.anvilenchantguide.AnvilEnchantGuideMod;
 import cn.blockforge.generated.anvilenchantguide.data.AnvilBrowserData;
 import cn.blockforge.generated.anvilenchantguide.data.AnvilEnchantData;
@@ -14,10 +19,6 @@ import dev.emi.emi.api.recipe.EmiRecipe;
 import dev.emi.emi.api.recipe.EmiRecipeCategory;
 import dev.emi.emi.api.recipe.VanillaEmiRecipeCategories;
 import dev.emi.emi.api.stack.EmiStack;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.component.DataComponentPatch;
 import net.minecraft.core.registries.Registries;

@@ -1,15 +1,15 @@
 package cn.blockforge.generated.anvilenchantguide.data;
 
-import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.EnchantmentTags;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.ItemEnchantments;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ItemStack;
 
 /** 1.21 的附魔标签与已经核实的特殊铁砧入口。 */
 public final class EnchantmentCompat {

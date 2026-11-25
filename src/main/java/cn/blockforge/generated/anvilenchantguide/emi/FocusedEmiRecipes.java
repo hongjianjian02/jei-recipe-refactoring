@@ -1,15 +1,16 @@
 package cn.blockforge.generated.anvilenchantguide.emi;
 
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
 import cn.blockforge.generated.anvilenchantguide.data.AnvilEnchantData;
 import cn.blockforge.generated.anvilenchantguide.recipe.AnvilRecipeFactory;
 import cn.blockforge.generated.anvilenchantguide.recipe.AnvilRepairRecipe;
 import cn.blockforge.generated.anvilenchantguide.util.QueryResults;
 import dev.emi.emi.api.recipe.EmiRecipe;
 import dev.emi.emi.api.stack.EmiStack;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
 import net.minecraft.core.component.DataComponentPatch;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.enchantment.ItemEnchantments;

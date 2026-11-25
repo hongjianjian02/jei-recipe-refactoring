@@ -11,8 +11,8 @@ import cn.blockforge.generated.anvilenchantguide.data.EquipGroup;
 import cn.blockforge.generated.anvilenchantguide.util.TextUtils;
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.ItemStack;
 
 /** Shared anvil-guide information; callers own tooltip timing and browser presentation. */
 public final class AnvilGuideText {
@@ -117,6 +117,10 @@ public final class AnvilGuideText {
             conflicts.addAll(AnvilEnchantData.conflictsFor(entry.enchantment(), target));
         }
         return List.copyOf(conflicts);
+    }
+
+    public static Component repairLabel() {
+        return Component.translatable("anvil_enchant_guide.repair.label");
     }
 
     public static Component repairMaterials(List<ItemStack> materials, int limit) {

@@ -1,19 +1,13 @@
 package cn.blockforge.generated.anvilenchantguide.data;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNotSame;
-import static org.junit.jupiter.api.Assertions.assertSame;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import cn.blockforge.generated.anvilenchantguide.recipe.AnvilBookItemsRecipe;
-import cn.blockforge.generated.anvilenchantguide.recipe.AnvilRecipeFactory;
-import com.mojang.serialization.Lifecycle;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+
+import cn.blockforge.generated.anvilenchantguide.recipe.AnvilBookItemsRecipe;
+import cn.blockforge.generated.anvilenchantguide.recipe.AnvilRecipeFactory;
+import com.mojang.serialization.Lifecycle;
 import net.minecraft.core.component.DataComponentMap;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.Holder;
@@ -43,6 +37,13 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotSame;
+import static org.junit.jupiter.api.Assertions.assertSame;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class AnvilEnchantDataTest {
 

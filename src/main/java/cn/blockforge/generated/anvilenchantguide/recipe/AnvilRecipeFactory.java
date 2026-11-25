@@ -9,13 +9,13 @@ import java.util.Map;
 import cn.blockforge.generated.anvilenchantguide.data.AnvilEnchantData;
 import cn.blockforge.generated.anvilenchantguide.data.BookEntry;
 import cn.blockforge.generated.anvilenchantguide.data.EquipGroup;
-import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponentPatch;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.core.Holder;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.ItemEnchantments;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 
 /** 将当前连接的数据转换为浏览器共用的铁砧查询模型。 */
 public final class AnvilRecipeFactory {

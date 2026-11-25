@@ -3,7 +3,7 @@ package cn.blockforge.generated.anvilenchantguide.emi;
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.blockforge.generated.anvilenchantguide.jei.AnvilRepairRecipe;
+import cn.blockforge.generated.anvilenchantguide.recipe.AnvilRepairRecipe;
 import cn.blockforge.generated.anvilenchantguide.ui.AnvilGuideText;
 import dev.emi.emi.api.recipe.EmiRecipe;
 import dev.emi.emi.api.recipe.EmiRecipeCategory;

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.blockforge.generated.anvilenchantguide.data.AnvilEnchantData;
+import cn.blockforge.generated.anvilenchantguide.recipe.AnvilRepairRecipe;
 import cn.blockforge.generated.anvilenchantguide.ui.AnvilGuideText;
 import cn.blockforge.generated.anvilenchantguide.util.TextUtils;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
@@ -13,15 +14,15 @@ import mezz.jei.api.gui.drawable.IDrawable;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.gui.widgets.IRecipeExtrasBuilder;
 import mezz.jei.api.helpers.IGuiHelper;
+import mezz.jei.api.recipe.category.AbstractRecipeCategory;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
-import mezz.jei.api.recipe.category.AbstractRecipeCategory;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ItemStack;
 
 /**
  * 铁砧修复页：左格放修复材料，右侧滚动网格列出它能修补耐久的全部物品。

@@ -1,9 +1,9 @@
 package cn.blockforge.generated.anvilenchantguide.emi;
 
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import org.junit.jupiter.api.Test;
 
 /** The token used by retained recipe widgets; this does not open an EMI screen. */
 class EmiViewEpochTest {

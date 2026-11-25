@@ -5,8 +5,8 @@ import java.util.List;
 
 import cn.blockforge.generated.anvilenchantguide.data.AnvilEnchantData;
 import cn.blockforge.generated.anvilenchantguide.data.BookEntry;
-import cn.blockforge.generated.anvilenchantguide.jei.AnvilItemEnchantRecipe;
-import cn.blockforge.generated.anvilenchantguide.jei.AnvilRecipeFactory;
+import cn.blockforge.generated.anvilenchantguide.recipe.AnvilItemEnchantRecipe;
+import cn.blockforge.generated.anvilenchantguide.recipe.AnvilRecipeFactory;
 import cn.blockforge.generated.anvilenchantguide.ui.AnvilGuideLayoutText;
 import cn.blockforge.generated.anvilenchantguide.ui.AnvilGuideText;
 import dev.emi.emi.api.EmiApi;
@@ -18,10 +18,10 @@ import dev.emi.emi.api.widget.Bounds;
 import dev.emi.emi.api.widget.SlotWidget;
 import dev.emi.emi.api.widget.Widget;
 import dev.emi.emi.api.widget.WidgetHolder;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent;
+import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.FormattedCharSequence;
@@ -126,15 +126,14 @@ public final class EmiAnvilItemRecipe implements EmiRecipe {
     }
 
     private List<EmiAnvilGridWidget.Cell> bookCells() {
-        List<EmiAnvilGridWidget.Cell> cells = new ArrayList<>();
+        List<EmiAnvilGridWidget.Cell> cells = new ArrayList<>(Math.max(model.gridCells(EmiAnvilView.COLUMNS), 0));
         int curseStart = model.firstCurseIndex();
         int positives = model.separatesCurses() ? curseStart : model.books().size();
         for (int index = 0; index < positives; index++) {
             addBookCell(cells, model.books().get(index));
         }
         if (model.separatesCurses()) {
-            int remainder = curseStart % EmiAnvilView.COLUMNS;
-            int padding = (remainder == 0 ? 0 : EmiAnvilView.COLUMNS - remainder) + EmiAnvilView.COLUMNS;
+            int padding = AnvilItemEnchantRecipe.sectionPadding(curseStart, EmiAnvilView.COLUMNS);
             for (int index = 0; index < padding; index++) {
                 cells.add(index == padding - 1
                         ? EmiAnvilGridWidget.Cell.header(Component.translatable(
@@ -163,7 +162,7 @@ public final class EmiAnvilItemRecipe implements EmiRecipe {
         SlotWidget slot = widgets.addSlot(EmiIngredient.of(materials.stream().map(EmiAnvilView::stack).toList()), 5, 101);
         AnvilGuideText.repairLookupTooltip(materials).forEach(slot::appendTooltip);
         Font font = Minecraft.getInstance().font;
-        Component label = AnvilGuideLayoutText.repairLabel();
+        Component label = AnvilGuideText.repairLabel();
         widgets.addText(label, 27, 107, EmiAnvilView.TEXT, false);
         int namesX = 31 + font.width(label);
         int maxWidth = EmiAnvilView.WIDTH - namesX - 4;

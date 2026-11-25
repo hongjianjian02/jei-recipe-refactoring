@@ -11,16 +11,14 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
-import org.slf4j.Logger;
-
 import com.mojang.logging.LogUtils;
-
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ItemStack;
 import net.neoforged.fml.ModList;
+import org.slf4j.Logger;
 
 /**
  * 永恒枪械工坊：零（Timeless and Classics Zero，modid {@code tacz}）兼容层。

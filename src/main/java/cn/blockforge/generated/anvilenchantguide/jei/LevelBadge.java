@@ -1,12 +1,11 @@
 package cn.blockforge.generated.anvilenchantguide.jei;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-
 import cn.blockforge.generated.anvilenchantguide.util.TextUtils;
+import com.mojang.blaze3d.vertex.PoseStack;
 import mezz.jei.api.gui.drawable.IDrawable;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.Minecraft;
 
 /**
  * 附魔书格子右下角的等级角标：只画罗马数字本身，不铺底色。

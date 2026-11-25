@@ -3,8 +3,8 @@ package cn.blockforge.generated.anvilenchantguide.data;
 import java.util.Locale;
 
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.AnimalArmorItem;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.CrossbowItem;

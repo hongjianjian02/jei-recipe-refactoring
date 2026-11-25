@@ -1,5 +1,6 @@
 package cn.blockforge.generated.anvilenchantguide.jei;
 
+import cn.blockforge.generated.anvilenchantguide.recipe.AnvilBookItemsRecipe;
 import cn.blockforge.generated.anvilenchantguide.ui.AnvilGuideLayoutText;
 import cn.blockforge.generated.anvilenchantguide.ui.AnvilGuideText;
 import cn.blockforge.generated.anvilenchantguide.util.TextUtils;
@@ -10,15 +11,15 @@ import mezz.jei.api.gui.drawable.IDrawable;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.gui.widgets.IRecipeExtrasBuilder;
 import mezz.jei.api.helpers.IGuiHelper;
+import mezz.jei.api.recipe.category.AbstractRecipeCategory;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
-import mezz.jei.api.recipe.category.AbstractRecipeCategory;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ItemStack;
 
 /**
  * 附魔书页物品反查：输入一本附魔书，用一整块滚动网格列出所有能用它的物品。

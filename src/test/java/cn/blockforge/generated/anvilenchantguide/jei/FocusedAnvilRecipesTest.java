@@ -1,18 +1,14 @@
 package cn.blockforge.generated.anvilenchantguide.jei;
 
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertSame;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import java.lang.reflect.Proxy;
+import java.util.List;
+import java.util.Optional;
 
 import cn.blockforge.generated.anvilenchantguide.data.AnvilEnchantData;
 import cn.blockforge.generated.anvilenchantguide.recipe.AnvilBookItemsRecipe;
 import cn.blockforge.generated.anvilenchantguide.recipe.AnvilItemEnchantRecipe;
 import cn.blockforge.generated.anvilenchantguide.recipe.AnvilRecipeFactory;
 import com.mojang.serialization.Lifecycle;
-import java.lang.reflect.Proxy;
-import java.util.List;
-import java.util.Optional;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.ingredients.IIngredientHelper;
 import mezz.jei.api.ingredients.IIngredientType;
@@ -44,6 +40,11 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertSame;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /** Real Minecraft data with API lookup substitutes; this does not launch or test the JEI GUI. */
 class FocusedAnvilRecipesTest {

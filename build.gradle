@@ -2,37 +2,56 @@ plugins {
     id 'java'
     id 'net.neoforged.moddev' version '2.0.148'
 }
+
 version = '1.2.5-mc1.21.1'
 group = 'cn.blockforge.generated.anvilenchantguide'
-base { archivesName = 'jei_recipe_refactoring' }
+
+base {
+    archivesName = 'jei_recipe_refactoring'
+}
+
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 neoForge {
     version = '21.1.265'
-    mods { anvil_enchant_guide { sourceSet sourceSets.main } }
+    mods {
+        anvil_enchant_guide {
+            sourceSet sourceSets.main
+        }
+    }
     unitTest {
         enable()
         testedMod = mods.anvil_enchant_guide
     }
     runs {
-        client { client() }
+        client {
+            client()
+        }
         server {
             server()
             programArgument '--nogui'
         }
     }
 }
+
 repositories {
-    maven { url = 'https://maven.blamejared.com/' }
-    maven { url = 'https://maven.terraformersmc.com/releases/' }
+    maven {
+        url = 'https://maven.blamejared.com/'
+    }
+    maven {
+        url = 'https://maven.terraformersmc.com/releases/'
+    }
     mavenCentral()
 }
+
 def jeiVersion = '19.76.1.481'
 def emiVersion = '1.1.24+1.21.1'
+
 configurations {
     localRuntime
     jeiTestApi
 }
+
 configurations.runtimeClasspath.extendsFrom(configurations.localRuntime)
 configurations.testCompileOnly.extendsFrom(configurations.compileOnly)
 dependencies {
@@ -51,13 +70,16 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.11.4'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
-tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
 tasks.named('test', Test) {
     useJUnitPlatform()
     // Only the regression loads this deliberately forbidden helper. JUnit discovery
     // must not load it first as a potential test class.
     exclude '**/ForbiddenMixinHelperProbe.class'
 }
+
 // JUnit's Minecraft classes live in NeoForge's TRANSFORMER loader. Keep the API
 // there too, without starting the client JEI mod or publishing test-only classes.
 tasks.named('processTestResources', ProcessResources) {
@@ -70,9 +92,12 @@ tasks.withType(Jar).configureEach {
     reproducibleFileOrder = true
     from('LICENSE') { into 'META-INF' }
 }
+
 processResources {
     def props = [mod_id: 'anvil_enchant_guide', mod_name: 'JEI recipe refactoring', mod_version: project.version]
     inputs.properties props
     filteringCharset = 'UTF-8'
-    filesMatching('META-INF/neoforge.mods.toml') { expand props }
+    filesMatching('META-INF/neoforge.mods.toml') {
+        expand props
+    }
 }

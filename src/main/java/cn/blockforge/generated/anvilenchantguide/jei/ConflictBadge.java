@@ -1,11 +1,10 @@
 package cn.blockforge.generated.anvilenchantguide.jei;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-
 import mezz.jei.api.gui.drawable.IDrawable;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.Minecraft;
 
 /** 物品格子左上角的红色感叹号：提示这件物品与当前附魔书存在互斥附魔。 */
 public final class ConflictBadge implements IDrawable {

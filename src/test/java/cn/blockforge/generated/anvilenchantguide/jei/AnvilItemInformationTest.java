@@ -1,15 +1,12 @@
 package cn.blockforge.generated.anvilenchantguide.jei;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import java.util.List;
+import java.util.Optional;
 
 import cn.blockforge.generated.anvilenchantguide.data.AnvilEnchantData;
 import cn.blockforge.generated.anvilenchantguide.recipe.AnvilItemEnchantRecipe;
 import cn.blockforge.generated.anvilenchantguide.recipe.AnvilRecipeFactory;
 import com.mojang.serialization.Lifecycle;
-import java.util.List;
-import java.util.Optional;
 import net.minecraft.core.component.DataComponentMap;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.HolderSet;
@@ -32,6 +29,10 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /** Shared item-page eligibility with real repair rules; this does not launch an EMI R/U screen. */
 class AnvilItemInformationTest {

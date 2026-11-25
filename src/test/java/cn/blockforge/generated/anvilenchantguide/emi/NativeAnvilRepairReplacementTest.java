@@ -1,14 +1,13 @@
 package cn.blockforge.generated.anvilenchantguide.emi;
 
+import java.util.List;
+
+import net.minecraft.resources.ResourceLocation;
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import java.util.List;
-
-import org.junit.jupiter.api.Test;
-
-import net.minecraft.resources.ResourceLocation;
 
 /** Registration readiness and exact native identities, without loading EMI client classes. */
 class NativeAnvilRepairReplacementTest {

@@ -2,6 +2,7 @@ package cn.blockforge.generated.anvilenchantguide.mixin;
 
 import java.util.List;
 import java.util.Set;
+
 import cn.blockforge.generated.anvilenchantguide.emi.EmiFocusedQueryManager;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.loading.FMLEnvironment;

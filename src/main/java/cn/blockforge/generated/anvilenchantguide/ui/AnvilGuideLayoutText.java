@@ -3,7 +3,7 @@ package cn.blockforge.generated.anvilenchantguide.ui;
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.blockforge.generated.anvilenchantguide.jei.AnvilBookItemsRecipe;
+import cn.blockforge.generated.anvilenchantguide.recipe.AnvilBookItemsRecipe;
 import cn.blockforge.generated.anvilenchantguide.util.TextUtils;
 import net.minecraft.client.gui.Font;
 import net.minecraft.network.chat.Component;
@@ -38,10 +38,6 @@ public final class AnvilGuideLayoutText {
         }
         lines.add(current);
         return List.copyOf(lines);
-    }
-
-    public static Component repairLabel() {
-        return Component.translatable("anvil_enchant_guide.repair.label");
     }
 
     /** Callers omit the names when the available width is at most eight pixels. */

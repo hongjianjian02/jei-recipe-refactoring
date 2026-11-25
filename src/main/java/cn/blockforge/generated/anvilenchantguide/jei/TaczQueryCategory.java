@@ -1,7 +1,7 @@
 package cn.blockforge.generated.anvilenchantguide.jei;
 
-import java.util.List;
 import java.util.function.Supplier;
+import java.util.List;
 
 import cn.blockforge.generated.anvilenchantguide.data.TaczCompat;
 import cn.blockforge.generated.anvilenchantguide.util.TextUtils;
@@ -13,16 +13,16 @@ import mezz.jei.api.gui.ingredient.IRecipeSlotDrawable;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.gui.widgets.IRecipeExtrasBuilder;
 import mezz.jei.api.helpers.IGuiHelper;
+import mezz.jei.api.recipe.category.AbstractRecipeCategory;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
 import mezz.jei.api.recipe.RecipeType;
-import mezz.jei.api.recipe.category.AbstractRecipeCategory;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ItemStack;
 
 /**
  * 永恒枪械工坊：零的三个查询页签，界面与铁砧附魔页同款：左侧输入格 + 箭头 + 右侧 6×4 滚动网格。

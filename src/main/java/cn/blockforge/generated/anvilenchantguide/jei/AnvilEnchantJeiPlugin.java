@@ -1,5 +1,12 @@
 package cn.blockforge.generated.anvilenchantguide.jei;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
 import cn.blockforge.generated.anvilenchantguide.AnvilEnchantGuideMod;
 import cn.blockforge.generated.anvilenchantguide.data.AnvilBrowserData;
 import cn.blockforge.generated.anvilenchantguide.data.AnvilEnchantData;
@@ -10,12 +17,6 @@ import cn.blockforge.generated.anvilenchantguide.recipe.AnvilItemEnchantRecipe;
 import cn.blockforge.generated.anvilenchantguide.recipe.AnvilRecipeFactory;
 import cn.blockforge.generated.anvilenchantguide.recipe.AnvilRepairRecipe;
 import com.mojang.logging.LogUtils;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 import mezz.jei.api.constants.RecipeTypes;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.helpers.IGuiHelper;
